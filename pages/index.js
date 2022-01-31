@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="bg-black w-full h-screen p-8 text-white text-4xl ">
         <div className="flex flex-wrap">
-          {[...Array(546)].map(_ => <span className="px-2 telm">novu</span>)}
+          {[...Array(546)].map((e, i) => <span key={i} className="px-2 telm">novu</span>)}
 
         </div>
       </main>
