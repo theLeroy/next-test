@@ -3,25 +3,40 @@
 @tailwind utilities;
 
 
-$asd: blue;
-    // .telm {
-    //     color: $asd;
-    // }
+
+@font-face {
+    font-family: 'OpemSans';
+    src: url('/OpenSans-VariableFont.ttf') format("truetype-variations");
+    font-weight: 300 800;
+    }
+
+.telm {
+    // color: $asd;
+    font-family: 'OpemSans', sans-serif;
+    animation: anim 10s infinite;
+    
+}
 
 
-$base-color: #036;
+$base-color: #ebdfb7;
 @for $i from 1 through 40 {
-    .telm:nth-child(3n + #{$i}) {
+    .telm:nth-child(40n + #{$i}) {
         // animation: anim-#{$i} 1s;
-        animation: anim 5s infinite;
-        animation-delay:  -#{$i}s ;
+        animation-delay:  -#{$i}s;
     }
 }
+
+.telm:nth-child(20n) {
+    
+}
+
 @keyframes anim {
     from, to {
-        color: lighten($base-color, 5%);
+        color: lighten($base-color, 0%);
+        font-weight: 300;
     }
     50% {
-        color: lighten($base-color, 100%);
+        font-weight: 800;
+        color: lighten($base-color, 50%);
     }
 }
