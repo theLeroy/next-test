@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$asd: blue;
+    // .telm {
+    //     color: $asd;
+    // }
+
+
+$base-color: #036;
+@for $i from 1 through 40 {
+    .telm:nth-child(3n + #{$i}) {
+        // animation: anim-#{$i} 1s;
+        animation: anim 5s infinite;
+        animation-delay:  -#{$i}s ;
+    }
+}
+@keyframes anim {
+    from, to {
+        color: lighten($base-color, 5%);
+    }
+    50% {
+        color: lighten($base-color, 100%);
+    }
+}
